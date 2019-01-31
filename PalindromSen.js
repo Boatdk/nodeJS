@@ -8,7 +8,7 @@ for(var i=mid+1 ,j= mid;i<str.length-1,j>=0;i++,j--){
         if(str[i]==str[j]){
             status = true
         }else{
-            status =falsea
+            status =false
             break
         }
         // console.log("i : "+i+" j : "+j+" str[i] : "+str[i]+" str[j] : "+str[j]+" status : "+status)
