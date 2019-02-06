@@ -14,7 +14,7 @@ server.on('connection', (sock) => {
     console.log('data' + '[' + i + ']' + sock.remoteAddress + ' data: ' + data)
     if (i == 1) {
       sock.write('OK')
-    } else if (i == 2) {
+    } else if (i >= 2) {
       if (data == answer) {
         sock.write('BINGO')
       } else {
@@ -24,9 +24,9 @@ server.on('connection', (sock) => {
     i++
     c++
   })
-  // sock.on('close', (data) => {
-  //   console.log('CLOSED: ' + sock.remoteAddress + ' ' + sock.remotePort);
-  // });
+  sock.on('close', (data) => {
+    console.log('connection is CLOSED: ');
+  });
 
 
 });

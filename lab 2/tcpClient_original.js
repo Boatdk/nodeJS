@@ -16,14 +16,17 @@ client.on('data', function (data) {
         
         if (data == 'OK') {
             console.log('DATA: ' + data);
-            client.write('5')
+            client.write('16')
             
         }else if(data == 'BINGO'){
             console.log('Your number is : ' + data)
-            // client.destroy();
+            client.destroy();
             
-        }else if(data == 'FAIL')
+        }else if(data == 'FAIL'){
             console.log('data : ' + data)
+            client.destroy();
+        }
+            
     }
     
 });
