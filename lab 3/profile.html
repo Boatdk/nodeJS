@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+<header>
+  <div class="container">
+
+    <h1>Welcome to Noey-BNK</h1>
+    <h3>So cute !!</h3>
+  </div>
+</header>
+
+<body>
+
+
+
+
+  <div>
+    <a href="http://google.com">
+      <img src="https://i.pinimg.com/236x/dd/66/d5/dd66d5c52521243b057b528c7422d5a4.jpg" width="236" height="236" alt="NOEY-bnk">
+    </a>
+    <button onclick="alert('Hello');"> Alert </button>
+    <button onclick="changeP();"> Change P </button>
+  </div>
+  <div class="container">
+    <center>
+      <table>
+        <tbody>
+          <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+          </tr>
+          <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>80</td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+  </div>
+</body>
+<div>
+
+</div>
+<footer>
+  <div>
+    <h3>
+      เกร็ดน่ารัก ๆ ของคุณอ๊บ
+    </h3>
+    <p>
+      ที่มาของฉายา "คุณอ๊บ" : มีโอตะบอกว่าน้องหน้าเหมือนกบ โอตะคนอื่นเลยใช้รหัสลับ "อ๊บ" เรียกแทนตัวน้อง
+      และน้องก็ชอบกบมาก
+      ที่มาของฉายา "ตัวละครลับ" : ตอนน้องเข้ามาใหม่ ๆ น้องขี้อายมากจนคนจำไม่ได้ แต่พอน้องมีความมุ่งมั่น
+      ตั้งใจฝึกซ้อมจนพัฒนาการโดดเด่น ก็มีโอตะเห็นออร่าแห่งความมุ่งมั่นนั้น คุณอ๊บเลยกลายเป็นม้ามืดไปเลย
+      (แอบไปดูความน่ารักของคุณอ๊บได้ที่รายการ Tonight's the Night สิ รับรองโดนตกแน่นอน)
+
+      ทำไมเนยไม่ชอบ "กินผัก" : ผักไม่น่ารัก และเนยเป็นคนรักโลก กินผักแล้วจะไม่มีพืชอยู่บนโลกเลยไม่กิน (ไม่ใช่แล้วคุณอ๊บ
+      !!)
+    </p>
+  </div>
+
+
+</footer>
+
+<ul type="square">
+  <a href="https://bnk48nextdoor.com/index.php?%2Fcalendar%2F">
+    <li>check schedule bkn48</li>
+  </a>
+  <li></li>
+</ul>
+
+<style>
+  body {
+    background-image: url('https://wallpapertag.com/wallpaper/full/0/6/0/501715-best-pastel-colors-wallpaper-2000x1600-full-hd.jpg');
+  }
+
+  div {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  p {
+    text-align: left;
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+
+  table,
+  th,
+  td,
+  tr {
+    border: 1;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center
+  }
+
+  td {
+    width: 60px
+  }
+</style>
+<script>
+  jQuery("#id2").click(function () {
+    jQuery("#id2").text("Foo bar");
+  });
+
+  $("#id3").click(function () {
+    $(this).text("Short form");
+  });
+
+  $("#id3").css("border-style", "dashed");
+
+  $("#id3").click(function () {
+    $(this).fadeOut(3000);
+    $(this).fadeIn(3000);
+  });
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+    window.onload = function() {
+        $("#id1").text("successfully Load Id1");
+    }
+
+    $(document).ready(function () {
+        $("#id2").text("successfully Load Id2");
+    });
+
+    $(function () {
+        $("#id3").text("successfully Load Id3");
+    });
+
+    $(function ()  {
+        $("div").click( function () {
+            $(this).text("New DIV area");
+        });
+    });
+
+    $(function ()  {
+        $("#d1").click( function () {
+            $(this).html("<h1>New HTML DIV area<h1>");
+        });
+    });
+</script>
+
+
+</html>
