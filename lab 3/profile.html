@@ -1,6 +1,25 @@
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+  $(() =>  {
+
+    var $images = $("#d1 > .c1 > a").clone();
+
+    var $length = $images.length;
+    var $imgShow = 0;
+
+    $("#d1 > .c1").html($("#d1 > .c1 > a:first")); //hide picture
+
+    $("#d1 > .c1 > a").click(function(event) {
+
+      $(this).children().attr("src",
+        $("img", $images).eq(++$imgShow % $length).attr("src"));
+      event.preventDefault();
+
+    });
+  });
+</script>
 
 <header>
   <div class="container">
@@ -11,17 +30,20 @@
 </header>
 
 <body>
-
-
-
-
+    <div id="d1">
+        <div class="c1">
+                 <a href="#"><img src="https://pbs.twimg.com/profile_images/947518524225765377/0qFL0FOK_400x400.jpg"></a>
+                 <a href="#"><img src="https://t5.rbxcdn.com/8f6fd5eb1d6023d8b6ce548f82fcdf48"></a>
+                 <a href="#"><img src="https://f.gxx.garenanow.com/download/273c9a32e22c1ab1d9939e2dacf3c7340403010000004a4f00000000020100a8"></a>       
+        </div>
+     </div>
   <div>
     <a href="http://google.com">
       <img src="https://i.pinimg.com/236x/dd/66/d5/dd66d5c52521243b057b528c7422d5a4.jpg" width="236" height="236" alt="NOEY-bnk">
     </a>
-    <button onclick="alert('Hello');"> Alert </button>
-    <button onclick="changeP();"> Change P </button>
   </div>
+
+ <div id="d"></div>
   <div class="container">
     <center>
       <table>
@@ -106,48 +128,7 @@
     width: 60px
   }
 </style>
-<script>
-  jQuery("#id2").click(function () {
-    jQuery("#id2").text("Foo bar");
-  });
 
-  $("#id3").click(function () {
-    $(this).text("Short form");
-  });
-
-  $("#id3").css("border-style", "dashed");
-
-  $("#id3").click(function () {
-    $(this).fadeOut(3000);
-    $(this).fadeIn(3000);
-  });
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-<script>
-    window.onload = function() {
-        $("#id1").text("successfully Load Id1");
-    }
-
-    $(document).ready(function () {
-        $("#id2").text("successfully Load Id2");
-    });
-
-    $(function () {
-        $("#id3").text("successfully Load Id3");
-    });
-
-    $(function ()  {
-        $("div").click( function () {
-            $(this).text("New DIV area");
-        });
-    });
-
-    $(function ()  {
-        $("#d1").click( function () {
-            $(this).html("<h1>New HTML DIV area<h1>");
-        });
-    });
-</script>
 
 
 </html>
