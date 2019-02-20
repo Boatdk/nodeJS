@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import './App.css';
-import TaskList from './todo/TaskList'
-import InputTask from "./todo/InputTask";
+// import TaskList from './todo/TaskList'
+// import InputTask from "./todo/InputTask";
 import Github from "./github";
-
+import Content from "./Content"
+import Header from "./Header"
 
 class App extends Component {
 
@@ -29,11 +30,12 @@ class App extends Component {
 
        return (
            <div className="App">
-               <h1>Todo</h1>
-               <TaskList tasks={this.state.tasks}/>
-               <InputTask addTask={this.addTask} id={this.state.id}/>
-               <br/>
-               <Github/>
+           <div class="space">
+           <Header/>
+           </div>
+           
+           <Content/>
+            
            </div>
        );
    }

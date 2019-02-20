@@ -18,7 +18,8 @@ class Github extends Component {
     render() {
         const {data} = this.state
         if (data)
-            return ( <div>{data.id}: {data.name} <img src={data.avatar_url} alt="avatar" width="50px"/> </div> )
+            return ( <div>
+                {data.id}: {data.name} <img src={data.avatar_url} alt="avatar" width="50px"/> </div> )
         return (<div>.</div>);
     }
  }
