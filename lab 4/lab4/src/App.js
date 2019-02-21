@@ -5,6 +5,7 @@ import './App.css';
 import Github from "./github";
 import Content from "./Content"
 import Header from "./Header"
+import Data from './Data'
 
 class App extends Component {
 
@@ -35,6 +36,7 @@ class App extends Component {
            </div>
            
            <Content/>
+           <Data/>
             
            </div>
        );
