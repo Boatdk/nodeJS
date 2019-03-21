@@ -1,6 +1,6 @@
 import React, {Component}  from 'react';
 // import axios from "axios"
-import {getApi} from '../App'
+import {getApi} from '../action'
 import {connect} from 'react-redux'
 
 class Github extends Component {
@@ -9,25 +9,12 @@ class Github extends Component {
         console.log('props', this.props)
         this.props.getApi()
     }
-
-    // state = { user: 'wwarodom', data:''}
- 
-    // componentDidMount = () => this.fetchUser(this.state.user)
- 
-    // fetchUser = (USER) => {
-    //     axios.get(`https://api.github.com/users/${USER}`)
-    //         .then(res=> {
-    //             this.setState({data: res.data})
-    //             console.log(res.data)
-    //         })
-    // }
-
     
     renderUser = () => {
         // console.log(data)
-        console.log('props: ', this.props.data)
+        console.log('prop: ', this.props.data)
         if(this.props.data){
-           return this.props.data.url
+           return "URL: " + this.props.data.url+ "NAME: " + this.props.data.name
            
         }
     }
