@@ -14,7 +14,8 @@ class Github extends Component {
         // console.log(data)
         console.log('prop: ', this.props.data)
         if(this.props.data){
-           return "URL: " + this.props.data.url+ "NAME: " + this.props.data.name
+            var props = this.props
+           return <img src="props.data.avatar_url"/> + "URL: " + props.data.url+ "NAME: " + this.props.data.name
            
         }
     }
