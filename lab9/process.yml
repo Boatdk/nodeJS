@@ -1,0 +1,6 @@
+apps:
+   - script: index.js
+     name: mms
+     env:
+         NODE_ENV: production
+
